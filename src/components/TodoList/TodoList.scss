@@ -1,0 +1,49 @@
+.todoList {
+  margin: auto;
+  border: 2px solid black;
+  width: fit-content;
+  padding: 20px;
+  width: 95%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 3px 15px 4px rgba(0, 0, 0, 0.602);
+  margin-top: 30px;
+  h1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-align: center;
+  }
+  form {
+    display: flex;
+    width: 100%;
+    input {
+      flex-grow: 1;
+      height: 50px;
+      font-size: 1.2rem;
+      padding-left:10px;
+      /* On screens that are 600px or less, set the background color to olive */
+    }
+    @media screen and (max-width: 600px) {
+      input {
+        width: 50px;
+        font-size: 1.1rem;
+      }
+    }
+    button {
+      width: 60px;
+      background-color: firebrick;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(124, 23, 23);
+      }
+    }
+  }
+  ul {
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+    list-style: none;
+  }
+}

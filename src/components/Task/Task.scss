@@ -1,0 +1,20 @@
+.task {
+  background-color: rgb(216, 213, 213);
+  border-radius: 5px;
+  padding:15px;
+  margin:10px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-family: monospace;
+  width: 100%;
+  .cross {
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 600px) {
+  .task {
+
+    font-size: 1.1rem;
+  }
+}

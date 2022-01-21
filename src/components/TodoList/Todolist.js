@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react";
 import Task from "../Task/Task";
 import { v4 as uuidv4 } from "uuid";
+import './TodoList.scss';
 
-export default function Todolist() {
+export default function TodoList() {
   let localeTask = JSON.parse(localStorage.getItem("taskStorage")) || [];
   const [taskList, setTaskList] = useState(localeTask);
   const taskInput = useRef();
@@ -31,11 +32,11 @@ export default function Todolist() {
     });
   };
   return (
-    <div>
+    <div className="todoList">
       <h1>TODOLIST</h1>
       <form onSubmit={addTask}>
-        <input type="text" placeholder="Clean my room.." ref={taskInput} required="required" />
-        <button>+</button>
+        <input type="text" placeholder="Add a task..." ref={taskInput} required="required" />
+        <button>➕</button>
       </form>
       <ul>
         {taskList.map(el => (
